@@ -1,0 +1,20 @@
+BUILD ON WINDOWS (Android Studio)
+
+1. Install Android Studio stable: https://developer.android.com/studio
+2. In Android Studio > SDK Manager, install Android SDK Platform 35 and a recent Android SDK Build-Tools.
+3. Extract this project folder somewhere writable.
+4. Android Studio > Open > choose the extracted `messi_cr7_app` folder.
+5. Let Gradle sync/download dependencies. Internet is needed for the first build.
+6. Build > Build Bundle(s) / APK(s) > Build APK(s).
+7. APK output: app\build\outputs\apk\debug\app-debug.apk
+8. Copy the APK to your Android phone and install it. You may need to allow installs from your file manager.
+
+SOUND CLIPS
+- Messi: https://www.voicy.network/sounds/D_s8umEz6EqBlSoB4DPztg-que-miras-bobo
+- Ronaldo: https://www.voicy.network/sounds/rcC_5KlG3kqCfxoN26061A-siuuuuu
+Open each page, use its Download control, then tap ADD MESSI AUDIO / ADD SIUUU AUDIO inside the app and choose the saved file.
+
+AUTOMATED CLOUD BUILD
+The .github/workflows/build-apk.yml workflow can build the debug APK on GitHub Actions after you upload this folder to a GitHub repository. In the repository, open Actions > Build Android APK > Run workflow, then download the APK artifact from the completed run.
+
+This environment does not have Android SDK/Gradle installed, so an APK binary has not been compiled or tested here.
